@@ -3,15 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<title>Document</title>
 	</head>
 	<body>
 		<header class="main__header">
@@ -60,7 +53,20 @@
 				</div>
 			</section>
 			<section class="hero">
-				<div class="hero__block container">
+				<div class="hero__block container" style="width: 100%; height: 50vh" ;>
+					<div class="d-flex justify-content-between gap-5">
+						<img src="" id="main-img" />
+
+						<div class="details"><h2 class="hero__items__content__title">Дверной Замок Golden Soft для офиса</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia voluptatem dolor molestiae eius rerum ipsum repellat fugiat quo numquam nemo ducimus quia provident nesciunt velit, necessitatibus veritatis aliquid quidem? Temporibus, perferendis tempore maxime voluptatibus distinctio quae ipsa nobis, nihil quo sequi, ullam excepturi suscipit iusto! Recusandae nulla illo voluptatum dolor?</p>
+      <div class="hero__items__content__price">
+       <h3 class="hero__items__content__price__number">7000 ₽</h3>
+       <h2 class="hero__items__content__real__price">8000 ₽</h2>
+
+      </div>
+      <button class="social__btn">KORZINKA</button>
+     </div>
+					</div>
 					<div class="hero__block__text">
 						<ul class="hero__block__text__btn">
 							<button class="hero__block__text__btn__btn">Сбросить фильтры</button>
@@ -70,49 +76,9 @@
 						</ul>
 						<select class="categories__list" id="categories">
 							<option value="Popularity">Популярности</option>
-							<option class="card-price" value="price">Price</option>
+							<option value="price">Price</option>
 						</select>
 					</div>
-				</div>
-			</section>
-			<section class="hero__items">
-				<div class="hero__items__content container">
-					<div class="hero__items__filter">
-						<div class="hero__items__filter__content">
-							<h1 class="filter__title">Фильтр</h1>
-							<h2 class="filter__text">Цена</h2>
-
-                     <div class="filter">
-                        <!-- <label for="minPrice">Min Price:</label> -->
-                        <input class="input_min" type="number" id="minPrice" placeholder="7000">
-
-                        <!-- <label for="maxPrice">Max Price:</label> -->
-                        <input class="input_min" type="number" id="maxPrice" placeholder="17000">
-
-                     </div>
-                        <button class="apply__btn" id="applyFilter">Apply Filter</button>
-							<h2 class="filter__text">Особенности</h2>
-							<h2 class="filter__text">Цвет</h2>
-							<h2 class="filter__text">Материал</h2>
-							<h2 class="filter__text">Размеры</h2>
-						</div>
-					</div>
-					<div class="hero__content"></div>
-				</div>
-			</section>
-			<section class="pagination_block">
-				<div class="pagination container">
-					<a href="#">&laquo;</a>
-					<a href="#">1</a>
-					<a href="#" class="active_link">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<a href="#">5</a>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">...</a>
-					<a href="#">10</a>
-					<a href="#">&raquo;</a>
 				</div>
 			</section>
 			<section class="about">
@@ -239,37 +205,6 @@
 				</div>
 			</div>
 		</footer>
-
-		<template id="template">
-			<div class="wrapper">
-				<div class="hero__items__content__items">
-					<a href="./single-product.html">
-						<img class="hero__items__content__img" src="./img/hero_img_1.svg" alt="Mahsulot rasm"
-					/></a>
-				</div>
-				<div class="rating">
-					<img class="rating__img" src="./img/rating.svg" alt="Reyting" />
-					<p class="rating__text">(0) отзывов</p>
-				</div>
-				<div class="hero__items__content__title">Golden Soft</div>
-				<div class="hero__items__content__price">
-					<h3 class="hero__items__content__price__number">7000 ₽</h3>
-					<h2 class="hero__items__content__real__price">8000 ₽</h2>
-				</div>
-				<img class="hero__items__content__btn__order" src="./img/empty__wallet.svg" alt="" />
-			</div>
-		</template>
-
-		<script src="./js/main.js"></script>
-      <script id="product-template" type="text/template">
-         <div class="product">
-             <img src="{{img}}" alt="{{title}}">
-             <h3>{{title}}</h3>
-             <p>Price: {{price}}</p>
-             <p>Real Price: {{realPrice}}</p>
-         </div>
-     </script>
-
-
+		<script src="./js/single.js"></script>
 	</body>
 </html>
