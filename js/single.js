@@ -1,3 +1,6 @@
+const findElement = (element, parent = document) => {
+ return parent.querySelector(element);
+};
 
 const elMainImg = findElement("#main-img")
 

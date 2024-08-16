@@ -26,7 +26,7 @@
 					<img class="logo" src="./img/Logo.svg" alt="" />
 					<ul class="header__bottom__list">
 						<li class="header__bottom__list__item">
-							<a class="header__bottom__list__item__link" href="#">Главная</a>
+							<a class="header__bottom__list__item__link" href="./index.html">Главная</a>
 						</li>
 						<li class="header__bottom__list__item">
 							<a class="header__bottom__list__item__link active" href="#">Каталог</a>
@@ -42,7 +42,14 @@
 				<ul class="header__bottom__right__list">
 					<li><a class="contact__phone" href="#">+7 (966) 55 88 499</a></li>
 					<img class="liked__img" src="./img/liked.svg" alt="" />
-					<img class="cart__img" src="./img/cart.svg" alt="" />
+
+
+
+            <div class="icon-cart">
+               <span>0</span>
+               <a href="./korzinka.html"> <img class="cart__img" src="./img/cart.svg" alt="Cart" /></a>
+           </div>
+
 				</ul>
 			</div>
 		</header>
@@ -82,15 +89,12 @@
 							<h1 class="filter__title">Фильтр</h1>
 							<h2 class="filter__text">Цена</h2>
 
-                     <div class="filter">
-                        <!-- <label for="minPrice">Min Price:</label> -->
-                        <input class="input_min" type="number" id="minPrice" placeholder="7000">
+							<div class="filter">
+								<input class="input_min" type="number" id="minPrice" placeholder="7000" />
 
-                        <!-- <label for="maxPrice">Max Price:</label> -->
-                        <input class="input_min" type="number" id="maxPrice" placeholder="17000">
-
-                     </div>
-                        <button class="apply__btn" id="applyFilter">Apply Filter</button>
+								<input class="input_min" type="number" id="maxPrice" placeholder="17000" />
+							</div>
+							<button class="apply__btn" id="applyFilter">Apply Filter</button>
 							<h2 class="filter__text">Особенности</h2>
 							<h2 class="filter__text">Цвет</h2>
 							<h2 class="filter__text">Материал</h2>
@@ -246,6 +250,15 @@
 					<a href="./single-product.html">
 						<img class="hero__items__content__img" src="./img/hero_img_1.svg" alt="Mahsulot rasm"
 					/></a>
+					<div class="AtSale">
+						<p class="atSale_text">В наличии</p>
+					</div>
+					<div class="Sale">
+						<p class="sale__text">SALE</p>
+					</div>
+					<div class="gift">
+						<p class="gift__text">Подарок</p>
+					</div>
 				</div>
 				<div class="rating">
 					<img class="rating__img" src="./img/rating.svg" alt="Reyting" />
@@ -259,17 +272,22 @@
 				<img class="hero__items__content__btn__order" src="./img/empty__wallet.svg" alt="" />
 			</div>
 		</template>
-
+		<div class="cartTab">
+			<h1>Shopping Cart</h1>
+			<div class="listCart"></div>
+			<div class="btn">
+				<button class="close">CLOSE</button>
+				<button class="checkOut">Check Out</button>
+			</div>
+		</div>
 		<script src="./js/main.js"></script>
-      <script id="product-template" type="text/template">
-         <div class="product">
-             <img src="{{img}}" alt="{{title}}">
-             <h3>{{title}}</h3>
-             <p>Price: {{price}}</p>
-             <p>Real Price: {{realPrice}}</p>
-         </div>
-     </script>
+		<script id="product-template" type="text/template">
+			<div class="product">
+			    <img src="{{img}}" alt="{{title}}">
+			    <h3>{{title}}</h3>
 
-
+			    <p>Real Price: {{realPrice}}</p>
+			</div>
+		</script>
 	</body>
 </html>
